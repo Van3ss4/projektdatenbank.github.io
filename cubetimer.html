@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+   <!--- basic page needs
+   ================================================== -->
+   <meta charset="utf-8">
+	<title>Projektdatenbank</title>
+	<meta name="description" content="">  
+	<meta name="author" content="">
+
+   <!-- mobile specific metas
+   ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+ 	<!-- CSS
+   ================================================== -->
+   <link rel="stylesheet" href="css/base.css">
+   <link rel="stylesheet" href="css/vendor.css">  
+   <link rel="stylesheet" href="css/main.css">
+        
+
+   <!-- script
+   ================================================== -->
+	<script src="js/modernizr.js"></script>
+	<script src="js/pace.min.js"></script>
+
+   <!-- favicons
+	================================================== -->
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+
+</head>
+
+<body id="top">
+
+	<!-- header 
+   ================================================== -->
+   <header class="short-header">   
+
+   	<div class="gradient-block"></div>	
+
+   	<div class="row header-content">
+
+   		<div class="logo">
+	         <a href="index.html">Author</a>
+	      </div>
+
+	   	<nav id="main-nav-wrap">
+				<ul class="main-navigation sf-menu">
+					<li><a href="index.html" title="">Home</a></li>									
+					<li class="has-children current">
+						<a href="category.html" title="">Projekte</a>
+						<ul class="sub-menu">
+			            <li><a href="category.html">2021</a></li>
+			            <li><a href="category.html">2020</a></li>
+			            <li><a href="category.html">2019</a></li>
+			            <li><a href="category.html">2018</a></li>
+			         </ul>
+					</li>
+					<li><a href="style-guide.html" title="">Über mich</a></li>										
+				</ul>
+			</nav> <!-- end main-nav-wrap -->
+
+			<div class="search-wrap">
+				
+				<form role="search" method="get" class="search-form" action="#">
+					<label>
+						<span class="hide-content">Search for:</span>
+						<input type="search" class="search-field" placeholder="Type Your Keywords" value="" name="s" title="Search for:" autocomplete="off">
+					</label>
+					<input type="submit" class="search-submit" value="Search">
+				</form>
+
+				<a href="#" id="close-search" class="close-btn">Close</a>
+
+			</div> <!-- end search wrap -->	
+
+			<div class="triggers">
+				<a class="search-trigger" href="#"><i class="fa fa-search"></i></a>
+				<a class="menu-toggle" href="#"><span>Menu</span></a>
+			</div> <!-- end triggers -->	
+   		
+   	</div>     		
+   	
+   </header> <!-- end header -->
+
+
+   <!-- masonry
+   ================================================== -->
+<!-- content
+   ================================================== -->
+   <section id="content-wrap" class="blog-single">
+    <div class="row">
+        <div class="col-twelve">
+
+            <article class="format-standard">  
+
+                <div class="content-media">
+                     <div class="post-thumb">
+                         <img src="images/thumbs/cubetimer.png"> 
+                     </div>  
+                 </div>
+
+                 <div class="primary-content">
+
+                     <h1 class="page-title">Berührungsloser Timer zum Speedcuben</h1>	
+
+                     <ul class="entry-meta">
+                         <li class="date">November 2018</li>
+                    </ul>						
+
+                     <p class="lead">Problemstellung</p>
+                         
+                        <p>Herkömmliche Timer, wie sie auch bei Meisterschaften verwendet 
+                        werden, müssen aktuell zum Straten und Stoppen berührt werden. Das ist
+                        unhygienisch, da auch für den Wettbewerb mit den Füßen die gleichen Timer 
+                        verwendet werden, und sie so am Tag mehrere hundert Male verwendet werden,
+                        ohne zwischendurch gereinigt zu werden.
+                        Schlägt man außerdem zu fest auf die Timer, kommt es nicht selten zu Wackelkontakten,
+                        woraufhin die (potentielle Best-) Zeit gelöscht ist.
+                    </p> 
+
+                    <p class="lead">Lösung</p>
+
+                     <p>Ein Arduino Nano erkennt über zwei geneigt angebrachte 
+                         Ultraschallsensoren, wenn sich ein Hindernis vor ihnen auf dem 
+                         Tisch befindet. Die Zeit wird gestoppt und es wird der Durchschnitt 
+                         der letzten 5 und 12 Zeiten gebildet. Die schnellste Zeit, die Anzahl 
+                         der Solves, sowie der beste Durchschnitt von 5 und 12 werden 
+                         gespeichert und in einem Untermenü angezeigt, in das man durch 
+                         Betätigen der Taster erreicht. Es ist auch möglich, die letzte Zeit 
+                         zu löschen. Außerdem wird nach jedem Solve ein zufälliger Scramble 
+                         nach bestimmten Anforderungungen generiert, mit dem der Cube gescrambelt 
+                         werden kann.
+                    </p>
+
+
+                    <div class="row" style="margin-top: 50px;">
+                        <div class="col-six tab-full" style="text-align: center; padding: 5%;">
+                            <div class="row">
+                                <img src="images/thumbs/single/cubetimer_homescreen.jpg" style="width: 70%; max-width: 350px ;margin-left: 0;" alt="">
+                            </div>
+                            <div class="row">
+                                <p class="lead">Hauptmenü</p>
+                                <p>
+                                    generierter Scramble im oberen Teil des Bildschirms, in der Mitte
+                                    die letzte gestoppte Zeit (hier von einem Test), 
+                                    im unteren Bereich der aktuelle Durchschschnitt von 5 und 12 (ao5/ao12) 
+                                    sobald er sich berechnen lässt
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-six tab-full" style="text-align: center; padding: 5%;">
+                            <div class="row">
+                                <img src="images/thumbs/single/cubetimer_statistik.jpg" style="width: 70%; max-width: 350px; margin-right: 0;" alt="">
+                            </div>
+                            <div class="row">
+                                <p class="lead">Untermenü "Statistik"</p>
+                                <p>
+                                    zeigt die wichtigsten Daten, die einen Cuber so interessieren
+                                </p>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    <div class="row" style="margin-top: 50px;">
+                        <div class="col-six tab-full" style="text-align: center; vertical-align: center;">
+                            <img src="images/thumbs/single/cubetimer.JPG" style="width: 100%; max-width: 350px ;margin: auto;" alt="">
+                        </div>
+                        <div class="col-six tab-full" style="text-align: center;">
+                            <img src="images/thumbs/single/cubetimer_innenleben.jpg" style="width: 100%; max-width: 350px; margin: auto;" alt="">
+                        </div>
+                    </div>
+
+                    <div class="row" style="margin-top: 50px; text-align: center;"> 
+                            <img src="images/thumbs/single/cubetimer_plakat.png" style="width: 70%; margin: auto;" alt="">
+                    </div>
+
+
+
+
+                     
+                    						
+
+                 </div> <!-- end entry-primary -->		  			   
+
+                  <div class="pagenav group">
+                      <div class="prev-nav">
+                          <!-- <a href="#" rel="prev">
+                              <span>Previous</span>
+                              Tips on Minimalist Design 
+                          </a> -->
+                      </div>
+                       <div class="next-nav">
+                           <a href="#" rel="next">
+                               <span>nächstes</span>
+                              Ausklappbare Flaschenbürste 
+                           </a>
+                       </div>  				   
+                   </div>
+
+             </article>
+        
+
+         </div> <!-- end col-twelve -->
+    </div> <!-- end row -->
+
+    				
+
+
+
+          </div> <!-- end col-full -->
+      </div> <!-- end row comments -->
+     </div> <!-- end comments-wrap -->
+
+</section> <!-- end content -->
+
+   
+   <!-- footer
+   ================================================== -->
+   <footer>
+
+   	<div class="footer-main">
+
+   		<div class="row">  
+
+	      	<div class="col tab-full mob-full footer-info">            
+
+	            <h4>Information</h4>
+
+	               <p>
+		          	Diese Seite dient der (ordentlichen) Dokumentation meiner Projekte
+                </p>
+
+		      </div> <!-- end footer-info -->
+
+	      	<div class="col tab-1-3 mob-1-2 site-links">
+
+	      		<h4>Navigation</h4>
+
+	      		<ul>
+	      			<li><a href="#">Home</a></li>
+						<li><a href="#">Projektdatenbank</a></li>
+						<li><a href="#">Über mich</a></li>
+					</ul>
+
+	      	</div> <!-- end site-links -->  
+
+	      	<div class="col tab-1-3 mob-1-2 social-links">
+
+	      		<h4>Soziale Medien</h4>
+
+	      		<ul>
+						<li><a href="#">Instagram</a></li>
+                        <li><a href="#">Strava</a></li>
+					</ul>
+	      	           	
+	      	</div> <!-- end social links --> 
+
+              <div id="go-top">
+                <a class="smoothscroll" title="Back to Top" href="#top"><i class="icon icon-arrow-up"></i></a>
+             </div>  
+
+	      </div> <!-- end row -->
+
+   	</div> <!-- end footer-main -->
+
+   </footer>  
+
+   <div id="preloader"> 
+    	<div id="loader"></div>
+   </div> 
+
+   <!-- Java Script
+   ================================================== --> 
+   <script src="js/jquery-2.1.3.min.js"></script>
+   <script src="js/plugins.js"></script>
+   <script src="js/jquery.appear.js"></script>
+   <script src="js/main.js"></script>
+
+</body>
+
+</html>

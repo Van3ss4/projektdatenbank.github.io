@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+   <!--- basic page needs
+   ================================================== -->
+   <meta charset="utf-8">
+	<title>Projektdatenbank</title>
+	<meta name="description" content="">  
+	<meta name="author" content="">
+
+   <!-- mobile specific metas
+   ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+ 	<!-- CSS
+   ================================================== -->
+   <link rel="stylesheet" href="css/base.css">
+   <link rel="stylesheet" href="css/vendor.css">  
+   <link rel="stylesheet" href="css/main.css">
+        
+
+   <!-- script
+   ================================================== -->
+	<script src="js/modernizr.js"></script>
+	<script src="js/pace.min.js"></script>
+
+   <!-- favicons
+	================================================== -->
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+
+</head>
+
+<body id="top">
+
+	<!-- header 
+   ================================================== -->
+   <header class="short-header">   
+
+   	<div class="gradient-block"></div>	
+
+   	<div class="row header-content">
+
+   		<div class="logo">
+	         <a href="index.html">Author</a>
+	      </div>
+
+	   	<nav id="main-nav-wrap">
+				<ul class="main-navigation sf-menu">
+					<li><a href="index.html" title="">Home</a></li>									
+					<li class="has-children current">
+						<a href="category.html" title="">Projekte</a>
+						<ul class="sub-menu">
+			            <li><a href="category.html">2021</a></li>
+			            <li><a href="category.html">2020</a></li>
+			            <li><a href="category.html">2019</a></li>
+			            <li><a href="category.html">2018</a></li>
+			         </ul>
+					</li>
+					<li><a href="style-guide.html" title="">Über mich</a></li>										
+				</ul>
+			</nav> <!-- end main-nav-wrap -->
+
+			<div class="search-wrap">
+				
+				<form role="search" method="get" class="search-form" action="#">
+					<label>
+						<span class="hide-content">Search for:</span>
+						<input type="search" class="search-field" placeholder="Type Your Keywords" value="" name="s" title="Search for:" autocomplete="off">
+					</label>
+					<input type="submit" class="search-submit" value="Search">
+				</form>
+
+				<a href="#" id="close-search" class="close-btn">Close</a>
+
+			</div> <!-- end search wrap -->	
+
+			<div class="triggers">
+				<a class="search-trigger" href="#"><i class="fa fa-search"></i></a>
+				<a class="menu-toggle" href="#"><span>Menu</span></a>
+			</div> <!-- end triggers -->	
+   		
+   	</div>     		
+   	
+   </header> <!-- end header -->
+
+
+   <!-- masonry
+   ================================================== -->
+<!-- content
+   ================================================== -->
+   <section id="content-wrap" class="blog-single">
+    <div class="row">
+        <div class="col-twelve">
+
+            <article class="format-standard">  
+
+                <div class="content-media">
+                     <div class="post-thumb">
+                         <img src="images/thumbs/3d4x4Tictactoe.jpg"> 
+                     </div>  
+                 </div>
+
+                 <div class="primary-content">
+
+                     <h1 class="page-title">3D 4x4  Tic-Tac-Toe</h1>	
+
+                     <ul class="entry-meta">
+                         <li class="date">Februar 2020</li>
+                    </ul>						
+
+                     <p class="lead">Projektbeschreibung</p>
+                         
+                    <p>
+                        Der LED-Cube wurde aus P9823 LEDs (baugleich WS2812b) 
+                        zusammengebaut, die - richtig verdrahtet - wie ein 
+                        LED-Streifen mithilfe eines Arduinos und der Neopixel-Library  
+                        angesteuert werden können.
+                    </p>
+
+                    <p>
+                        Mit dem Controller navigiert man durch das Menü und kann 
+                        zwischen dem Ein- und Zweispielermodus auch ein Untermenü mit 
+                        Einstellungen (Spielerfarbe und LED-Helligkeit) auswählen.<br>
+                    </p>
+
+                    <div class="row" style="margin-top: 50px; margin-bottom: 50px; text-align: center;"> 
+                        <img src="images/thumbs/single/ttt_menuestruktur.png" style="width: 100%; margin: auto;" alt="">
+                    </div>
+
+                    <p>
+                        Um eine Position zu setzen, verschiebt man einen blinkenden 
+                        Marker mit den Buttons auf dem Controller und bestätigt die Position 
+                        schließlich. Dann kann entweder der andere Spieler seine Position 
+                        setzen oder das Programm generiert einen Move.
+                    </p> 
+
+
+                    
+                    <p style="margin-top: 50px;">
+                        <b>Prüfalgorithmus: "Hat jemand gewonnen?"</b><br><br>
+                        Es wird immer nur geprüft, ob der Spieler, der zuletzt einen Move gesetzt hat, 
+                        gewonnen hat. Das Programm durchläuft das Spielfeld, das als dreidimensionales 
+                        Array abgespeichert ist. Befindet sich ein Spieler an einer Position befindet 
+                        sich doch eine "1" oder "2", sonst eine 0. Findet das Programm den Spieler, 
+                        durchsucht es die Nachbarfelder. Wird ein Nachbar gefunden, wird dessen relative 
+                        Position zum ursprünglichen Punkt gespeichert und auf die absolute Position des 
+                        Nachbars addiert. Wird ein weiterer passender Nachbar gefunden, wird die Reihe 
+                        auf diese Weise immer weiter verlängert, bis sie lang genug (voll) ist. Dann hat 
+                        dieser Spieler gewonnen.
+                    </p>
+
+
+
+                    <p style="margin-top: 50px;">
+                        <b>Einspielermodus: Computer-Move</b><br><br>
+                        Das Programm prüft zuerst, ob es mit einem Move gewinnen kann. Ist das der Fall, 
+                        hat dieser Move die höchste Priorität und wird gesetzt. Wenn nicht, prüft es, 
+                        ob sein Gegner mit einem Move gewinnen kann, und verhindert das gegebenenfalls, 
+                        indem es die Position mit seinem Punkt blockiert.
+
+                        Kann weder das Programm, noch der Spieler mit einem Move gewinnen, wird geprüft, 
+                        ob das Programm in zwei Moves gewinnen könnte. Es "plant" also voraus. Ist das 
+                        auch nicht möglich, wird eine zufällige freie Position gesetzt.
+                    </p>
+
+                    <div class="row" style="margin-top: 50px;">
+                        <div class="col-seven tab-full" style="text-align: center; padding: 5%;">
+                            <div class="row">
+                                <img src="images/thumbs/single/ttt_controller_aufbau.png" style="width: 100%; max-width: 70vw ;margin-left: 0;" alt="">
+                            </div>
+                            <div class="row">
+                                <p class="lead">Controller</p>
+                                <p>
+                                    Er wurde aus 7 Drucktastern zusammengebaut. Je nachdem, 
+                                    in welchem Untermenü man sich befindet, haben die Tasten 
+                                    verschiedene Funktionen.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-five tab-full" style="text-align: center; padding: 5%;">
+                            <div class="row">
+                                <img src="images/thumbs/single/ttt_innnen.png" style="width: 100%; max-width: 70vw;" alt="">
+                            </div>
+                            <div class="row">
+                                <p class="lead">Innenleben</p>
+                                <p>
+                                    Das TFT-Display und die Controller-Knöpfe werden von einem 
+                                    Arduino Mega angesteuert, der über ein Relais die Stromversorgung 
+                                    für den LED-Cube regelt
+                                </p>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+
+                    <div class="row" style="text-align: center;">
+                        <img src="images/thumbs/single/ttt_spieler2hatgewonnen.jpg" alt="" style="width: 100%; max-width: 70vw; margin: auto;">
+                    </div>
+
+
+
+                     
+                    						
+
+                 </div> <!-- end entry-primary -->		  			   
+
+                  <div class="pagenav group">
+                      <div class="prev-nav">
+                          <!-- <a href="#" rel="prev">
+                              <span>Previous</span>
+                              Tips on Minimalist Design 
+                          </a> -->
+                      </div>
+                       <div class="next-nav">
+                           <a href="#" rel="next">
+                               <span>nächstes</span>
+                              Ausklappbare Flaschenbürste 
+                           </a>
+                       </div>  				   
+                   </div>
+
+             </article>
+        
+
+         </div> <!-- end col-twelve -->
+    </div> <!-- end row -->
+
+    				
+
+
+
+          </div> <!-- end col-full -->
+      </div> <!-- end row comments -->
+     </div> <!-- end comments-wrap -->
+
+</section> <!-- end content -->
+
+   
+   <!-- footer
+   ================================================== -->
+   <footer>
+
+   	<div class="footer-main">
+
+   		<div class="row">  
+
+	      	<div class="col tab-full mob-full footer-info">            
+
+	            <h4>Information</h4>
+
+	               <p>
+		          	Diese Seite dient der (ordentlichen) Dokumentation meiner Projekte
+                </p>
+
+		      </div> <!-- end footer-info -->
+
+	      	<div class="col tab-1-3 mob-1-2 site-links">
+
+	      		<h4>Navigation</h4>
+
+	      		<ul>
+	      			<li><a href="#">Home</a></li>
+						<li><a href="#">Projektdatenbank</a></li>
+						<li><a href="#">Über mich</a></li>
+					</ul>
+
+	      	</div> <!-- end site-links -->  
+
+	      	<div class="col tab-1-3 mob-1-2 social-links">
+
+	      		<h4>Soziale Medien</h4>
+
+	      		<ul>
+						<li><a href="#">Instagram</a></li>
+                        <li><a href="#">Strava</a></li>
+					</ul>
+	      	           	
+	      	</div> <!-- end social links --> 
+
+              <div id="go-top">
+                <a class="smoothscroll" title="Back to Top" href="#top"><i class="icon icon-arrow-up"></i></a>
+             </div>  
+
+	      </div> <!-- end row -->
+
+   	</div> <!-- end footer-main -->
+
+   </footer>  
+
+   <div id="preloader"> 
+    	<div id="loader"></div>
+   </div> 
+
+   <!-- Java Script
+   ================================================== --> 
+   <script src="js/jquery-2.1.3.min.js"></script>
+   <script src="js/plugins.js"></script>
+   <script src="js/jquery.appear.js"></script>
+   <script src="js/main.js"></script>
+
+</body>
+
+</html>
