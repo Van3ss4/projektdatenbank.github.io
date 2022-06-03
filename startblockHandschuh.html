@@ -51,20 +51,20 @@
 	   	<nav id="main-nav-wrap">
 				<ul class="main-navigation sf-menu">
 					<li><a href="index.html" title="">Home</a></li>									
-					<li class="has-children current">
+					<!--li class="has-children current">
 						<a href="category.html" title="">Projekte</a>
 						<ul class="sub-menu">
 			            <li><a href="category.html">2021</a></li>
 			            <li><a href="category.html">2020</a></li>
 			            <li><a href="category.html">2019</a></li>
 			            <li><a href="category.html">2018</a></li>
-			         </ul>
+			         </ul-->
 					</li>
 					<li><a href="style-guide.html" title="">Über mich</a></li>										
 				</ul>
 			</nav> <!-- end main-nav-wrap -->
 
-			<div class="search-wrap">
+			<!--div class="search-wrap">
 				
 				<form role="search" method="get" class="search-form" action="#">
 					<label>
@@ -76,10 +76,10 @@
 
 				<a href="#" id="close-search" class="close-btn">Close</a>
 
-			</div> <!-- end search wrap -->	
+			</div--> <!-- end search wrap -->	
 
 			<div class="triggers">
-				<a class="search-trigger" href="#"><i class="fa fa-search"></i></a>
+				<!--a class="search-trigger" href="#"><i class="fa fa-search"></i></a-->
 				<a class="menu-toggle" href="#"><span>Menu</span></a>
 			</div> <!-- end triggers -->	
    		
@@ -100,41 +100,57 @@
 
                 <div class="content-media">
                      <div class="post-thumb" style="text-align: center;">
-                         <img src="images/thumbs/waterlevelsensor.png" style="max-width: 60vh;"> 
+                         <img src="images/thumbs/startblockhandschuh.jpg" style="max-width: 60vh;"> 
+                         <img src="images/thumbs/StartblockHandschuh2.jpg" style="max-width: 60vh;"> 
                      </div>  
                  </div>
 
                  <div class="primary-content">
 
-                     <h1 class="page-title">Wasserstand-Sensor</h1>	
+                     <h1 class="page-title">Startblock-Handschuh-Timer</h1>	
 
                      <ul class="entry-meta">
-                         <li class="date">Juli 2021</li>
+                         <li class="date">August 2021</li>
                     </ul>						
 
-                    <p class="lead">Startblock-Handschuh-Timer</p>
+                    <p class="lead">Problemstellung</p>
                          
                     <p>
-                        Beim Recherchieren nach der Funktionsweise des Standard 
-                        Wasserstand-Sensors für Arduino und Raspberry Pi habe ich mich gefragt,
-                        ob so ein Modul nicht auch mit einfachen Mitteln nachgebaut werden
-                        kann und habe es ausprobiert.<br><br>
-                        Ein 3d-gedruckter Rahmen hält die Drähte, die abwechselnd and +5V und
-                        GND angeschlossen sind. Hält man dieses Modul ins Wasser, sinkt der
-                        elektrische Widerstand, was mithilfe einer Spannungsteilerschaltung
-                        messbar ist. Um den zweiten Widerstand zu dimensionieren, wurde der
-                        Widerstand des Messgitters mit einem Multimeter ermittelt.
-                        Mit dem Arduino wurde die maximale und minimale Spannung bzw. die Werte 
-                        am Analog-Pin ermittelt, die erreicht werden, wenn sich das Gitter
-                        entweder komplett im Wasser befindet, oder komplett trocken ist.<br>
-                        Zwischen diesen Grenzwerten wird interpoliert. Mit der Gesamtlänge des
-                        Messgitters kann so der Wasserstand berechnet und im Seriellen Monitor
-                        der Arduino IDE ausgegeben werden.
+                        Beim Starten aus dem Startblock kann ein Athlet seine Zeit
+                        nicht selbst stoppen, da in der Startposition beide Hände mit
+                        abgespreizten Fingern aufgestützt sind. Somit ist es nicht 
+                        möglich, eine Stoppuhr zu bedienen und die Zeit muss von einer 
+                        außenstehenden Person aufgenommen werden.<br>
+                        Beim Hürdenlauf ist es wichtig, in Vorbereitung auf den Wettkampf
+                        immer die gleiche Schrittfolge vor der ersten Hürde einzuhalten,
+                        um sie mit dem richtigen Bein und im richtigen Abstand zu treffen.
+                        Deshalb werden dabei im Training viele Starts aus dem Startblock
+                        ausgeführt. Besonders, wenn mehrere Athleten gleichzeitig laufen,
+                        ist das Stoppen der Zeit schwierig.
                     </p>
 
-                    <p><b>Anleitung zum Nachbauen auf Instructables:</b></p>
-                    <a href="https://www.instructables.com/Building-an-Arduino-Water-Level-Detection-Sensor/">https://www.instructables.com/Building-an-Arduino-Water-Level-Detection-Sensor/</a>
-
+                    <p class="lead">Lösung</p>
+                    
+                    <p>
+                        Der Startblock-Handschuh löst dieses Problem durch flache elektrische
+                        Kontakte an Daumen und Zeigefinger, die beim Aufsetzen der Hand 
+                        auf dem Boden geschlossen werden. Dieses Signal wird von einem
+                        Mikrocontroller registriert und ausgewertet. Nachdem Daumen und
+                        Zeigefinger drei Sekunden lang auf dem Boden platziert wurden, ohne
+                        die Hand zwischendurch abzuheben, ist der Timer "scharf" und startet 
+                        unmittelbar, wenn die Hand beim Loslaufen angehoben wird. 
+                        Im Ziel stoppt der Athlet die Zeit wieder über den Taster, der auf
+                        dem Handrücken angebracht ist. Die Zeit wird dann auf dem integrierten
+                        Display auf zwei Nachkommastellen genau angezeigt.<br><br>
+                        Der Handschuh wird durch einen wiederaufladbaren Akku mit Energie
+                        versorgt, der ebenfalls daran angebracht ist. Für den Prototypen
+                        wurde ein NodeMCU ESP8266 mit integriertem OLED-Display verwendet,
+                        an das der Lithium-Akku direkt angeschlossen werden kann. Das ermöglicht
+                        beispielsweise eine Erweiterung des Projekts um einen lokalen
+                        Access-Point, über den die erfassten Daten gesammelt auf ein
+                        Smartphone o.Ä. übertragen werden können. Mit dem Abschalten des Geräts
+                        werden die Daten wieder gelöscht.
+                    </p>
                 
                     						
 
@@ -146,13 +162,7 @@
                               <span>Previous</span>
                               Tips on Minimalist Design 
                           </a> -->
-                      </div>
-                       <div class="next-nav">
-                           <a href="#" rel="next">
-                               <span>nächstes</span>
-                              Ausklappbare Flaschenbürste 
-                           </a>
-                       </div>  				   
+                      </div> 				   
                    </div>
 
              </article>
@@ -196,22 +206,10 @@
 
 	      		<ul>
 	      			<li><a href="#">Home</a></li>
-						<li><a href="#">Projektdatenbank</a></li>
 						<li><a href="#">Über mich</a></li>
 					</ul>
 
 	      	</div> <!-- end site-links -->  
-
-	      	<div class="col tab-1-3 mob-1-2 social-links">
-
-	      		<h4>Soziale Medien</h4>
-
-	      		<ul>
-						<li><a href="#">Instagram</a></li>
-                        <li><a href="#">Strava</a></li>
-					</ul>
-	      	           	
-	      	</div> <!-- end social links --> 
 
               <div id="go-top">
                 <a class="smoothscroll" title="Back to Top" href="#top"><i class="icon icon-arrow-up"></i></a>
