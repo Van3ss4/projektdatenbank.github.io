@@ -70,7 +70,7 @@
 			</div> <!-- end search wrap -->	
 
 			<div class="triggers">
-				<a class="search-trigger" href="#"><i class="fa fa-search"></i></a>
+				<!--a class="search-trigger" href="#"><i class="fa fa-search"></i></a-->
 				<a class="menu-toggle" href="#"><span>Menu</span></a>
 			</div> <!-- end triggers -->	
    		
@@ -91,78 +91,36 @@
 
                 <div class="content-media">
                      <div class="post-thumb" style="text-align: center;">
-                         <img src="images/thumbs/IOT_Pumpensteuerung.png" style="max-width: 60vh;"> 
+                         <img src="images/thumbs/Coolcake1.jpg" style="max-width: 60vh;"> 
+                         <img src="images/thumbs/Coolcake2.jpg" style="max-width: 60vh;"> 
                      </div>  
                  </div>
 
                  <div class="primary-content">
 
-                     <h1 class="page-title">IOT-Pumpensteuerung</h1>	
+                     <h1 class="page-title">CoolCake</h1>	
 
                      <ul class="entry-meta">
-                         <li class="date">Juli 2020</li>
+                         <li class="date">August 2019</li>
                     </ul>						
 
-                    <p class="lead">Problemstellung</p>
+                    <p class="lead">Projektbeschreibung</p>
                          
                     <p>
-                        Aus der Pumpe sind vier Signalkabel herausgeführt, die für drei 
-                        verschiedene Leistungsstufen und ein On/Off-Signal stehen. Wird an 
-                        eines dieser Kabel eine Ansteuerspannung von 12 V angelegt, 
-                        registriert die Pumpe ein HIGH-Signal und schaltet in den 
-                        entsprechenden Modus bzw. schaltet sich ein oder aus. Aktuell muss
-                        die Leistungsstufe der Pumpe noch von Hand eingestellt werden, obwohl
-                        alle anderen Funktionen des Pool-Systems über WLAN fernteuerbar sind.
+                        Beim Backen von Kuchen und Tortenböden war meine Mutter immer
+                        davon genervt, dass man so lange warten muss, bis man sie weiter
+                        verarbeiten kann. Stellt man einen warmen Tortenboden allerdings in
+                        den Kühlschrank (wozu überhaupt erst einmal genug Platz vorhanden 
+                        sein muss) fällt er immer ein wenig in sich zusammen und wird "faltig". 
+                        Lässt man ihn einfach so stehen, braucht er teilweise 2h zum Abkühlen.<br><br>
+                        Um das zu vermeiden, habe ich ein Abkühlgitter mit elektrischen Lüftern
+                        gebaut. Sie sind in einem entsprechenden Winkel angebracht, dass der Luftstrom
+                        unter dem Tortenboden optimiert wird. Da ich keine anderen Materialien
+                        zur Verfügung hatte, besteht das Gerät hauptsächlich aus Pappe, das ich
+                        verspachtelt und bemalt habe. Damit dauert das Kühlen des Kuchenbodens
+                        nur noch etwa 20 min, bis er weiterverarbeitet werden kann.
                     </p>
 
-                    <p class="lead">Lösung</p>
-
-                    <p>
-                        Mithilfe eines 
-                        ESP8266 wurde ein Websocket Server aufgebaut, der sich im WLAN einloggt. 
-                        Beim ersten Start hat er allerdings weder SSID noch Passwort und 
-                        öffnet deshalb, wenn er sich in keinem Netzwerk einloggen kann, 
-                        einen lokalen Acces-Point, in den man sich dann mit einem Passwort 
-                        einloggen kann. Dort wird man dann automatisch auf eine Seite 
-                        geleitet, auf der man das gewünschte Netzwerk auswählen und das 
-                        Passwort eingeben kann. Daraufhin startet der ESP neu 
-                        und loggt sich selbst im Netzwerk ein.
-                    </p>
-
-                    <div class="row" style="margin-top: 50px;">
-                        <div class="col-six tab-full" style="text-align: center; padding: 5%;">
-                            <div class="row">
-                                <img src="images/thumbs/single/poolpumpe_AsyncWiFiManager.png" style="max-width: 70vw; max-height: 60vh;" alt="">
-                            </div>
-                            <div class="row" style="margin: 20px;">
-                                <p>
-                                    Access-Point des ESP8266 zur Anmeldung und Konfiguration
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-six tab-full" style="text-align: center; padding: 5%; max-height: 60vh;">
-                            <div class="row">
-                                <img src="images/thumbs/single/poolpumpe_AnmeldeseiteWifiManager.png" style="max-width: 70vw; max-height: 60vh;" alt="">
-                            </div>
-                            <div class="row" style="margin: 20px;">
-                                <p>
-                                    WiFi-Konfiguration: hier kann das gewünschte Netzwerk ausgewählt werden
-                                </p>
-                            </div>
-                            
-                        </div>
-                    </div>
-
-                    <p>
-                        Der Code ist in mehrere Dateien aufgeteilt, die im Flash Speicher 
-                        des Mikrocontrollers abgelegt sind. Ein Asynchroner Webserver ist 
-                        dafür verantwortlich, diese Dateien an den Client zu schicken, der 
-                        mit dem Websocket-Server kommunizieren möchte:
-                    </p>
-
-                    <div class="row" style="text-align: center;">
-                        <img src="images/thumbs/single/poolpumpe_SPIFFSGrafik.png" alt="" style="width: 50%; max-width: 70vw; margin: auto;">
-                    </div>
 
                     						
 
@@ -218,7 +176,7 @@
 
 	      		<ul>
 	      			<li><a href="#">Home</a></li>
-						<li><a href="#">Projektdatenbank</a></li>
+						 
 						<li><a href="#">Über mich</a></li>
 					</ul>
 

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+   <!--- basic page needs
+   ================================================== -->
+   <meta charset="utf-8">
+	<title>Projektdatenbank</title>
+	<meta name="description" content="">  
+	<meta name="author" content="">
+
+   <!-- mobile specific metas
+   ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+ 	<!-- CSS
+   ================================================== -->
+   <link rel="stylesheet" href="css/base.css">
+   <link rel="stylesheet" href="css/vendor.css">  
+   <link rel="stylesheet" href="css/main.css">
+        
+
+   <!-- script
+   ================================================== -->
+	<script src="js/modernizr.js"></script>
+	<script src="js/pace.min.js"></script>
+
+   <!-- favicons
+	================================================== -->
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+
+</head>
+
+<body id="top">
+
+	<!-- header 
+   ================================================== -->
+   <header class="short-header">   
+
+   	<div class="gradient-block"></div>	
+
+   	<div class="row header-content">
+
+   		<div class="logo">
+	         <a href="index.html">Author</a>
+	      </div>
+
+	   	<nav id="main-nav-wrap">
+				<ul class="main-navigation sf-menu">
+					<li><a href="index.html" title="">Home</a></li>									
+					<li><a href="style-guide.html" title="">Über mich</a></li>										
+				</ul>
+			</nav> <!-- end main-nav-wrap -->
+
+			<!--div class="search-wrap">
+				
+				<form role="search" method="get" class="search-form" action="#">
+					<label>
+						<span class="hide-content">Search for:</span>
+						<input type="search" class="search-field" placeholder="Type Your Keywords" value="" name="s" title="Search for:" autocomplete="off">
+					</label>
+					<input type="submit" class="search-submit" value="Search">
+				</form>
+
+				<a href="#" id="close-search" class="close-btn">Close</a>
+
+			</div> <!-- end search wrap -->	
+
+			<div class="triggers">
+				<!--a class="search-trigger" href="#"><i class="fa fa-search"></i></a-->
+				<a class="menu-toggle" href="#"><span>Menu</span></a>
+			</div> <!-- end triggers -->	
+   		
+   	</div>     		
+   	
+   </header> <!-- end header -->
+
+
+   <!-- masonry
+   ================================================== -->
+<!-- content
+   ================================================== -->
+   <section id="content-wrap" class="blog-single">
+    <div class="row">
+        <div class="col-twelve">
+
+            <article class="format-standard">  
+
+                <div class="content-media">
+                     <div class="post-thumb" style="text-align: center;">
+                         <img src="images/thumbs/workflowUrkunden.png" style="max-width: 60vh;">
+                     </div>  
+                 </div>
+
+                 <div class="primary-content">
+
+                     <h1 class="page-title">Automatische Urkundengenerierung</h1>	
+
+                     <ul class="entry-meta">
+                         <li class="date">April 2022</li>
+                    </ul>						
+
+                    <p class="lead">Problemstellung</p>
+                         
+                    <p>
+                        Letztes Jahr habe ich bei einem Kinder-Leichtathletikwettkampf geholfen, bei dem die
+                        Kinder mehrere Stationen durchlaufen und Punkte sammeln. Jedes Kind hat 
+                        dabei einen Laufzettel, auf dem die Leistungen an den einzelnen Stationen 
+                        eingetragen werden. Am Ende wird dieser Zettel im Wettkampfbüro abgegeben, wo 
+                        freiwillige Helfer (unter anderem ich) diese Leistungen in eine Tabelle übertragen, 
+                        die Sternebewertung aus einer anderen Tabelle abhängig von Jahrgang und Geschlecht des 
+                        Kindes ablesen und anschließend mit diesen Werten eine Urkundenvorlage ausfüllen. Bei
+                        ein paar hundert teilnehmenden Kindern ist das eine ziemlich nervige Aufgabe, zumal 
+                        schnell Tipp- oder Übertragungsfehler entstehen. Die Kinder können über einen Zeitraum
+                        von sechs Stunden jederzeit mit der Absolvierung der Stationen beginnen/aufhören.
+                        Das heißt, es kommen kontinuierlich Laufzettel rein, die verarbeitet werden müssen.
+                        Im Wettkampfbüro haben sich allerdings mit der Zeit immer mehr Laufzettel angestaut, weil sie nicht schnell genug
+                        verarbeitet werden konnten. Gerade zum Ende des Events mussten die Kinder teilweise 45 Minuten auf ihren
+                        Urkunde warten. Deshalb habe ich mir überlegt, wie man das System verbessern kann.
+
+                    </p>
+
+                    <p class="lead">Lösung</p>
+                         
+                    <p>
+                        Google bietet die Möglichkeit mit "Google Apps Scrip" Google Tabelle, Dokumente, Formulare usw. 
+                        zu verwalten. Die Sprache basiert auf JavaScript und hat Funktionen, mit denen man auf die
+                        verschiedenen Dokumente zugreifen kann. Diese Funktionen hat auch Microsoft Office, allerdings
+                        war es wichtig, dass mehrere Personen gleichzeitig von verschiedenen Rechnern auf die 
+                        Dokuente zugreifen können. Deshalb wurden die Google Apps bevorzugt<br><br>
+                        Da das Konzept mit den Laufzetteln erhalten bleiben sollte, um den Kindern ihren Fortschritt
+                        beim Absolvieren der Stationen zu visualisieren, werden die Ergebnisse nach wie vor im Wettkampfbüro
+                        einmalig in eine Google-Tabelle abgetippt. In dieser Tabelle sind die Spalten mit den Namen duch die Online-Anmeldung 
+                        schon vorangelegt, um Tippfehler bei den Namen zu vermeiden. <br>
+                        Sobald eine Zeile vollständig mit allen Werten ausgefüllt wurde, startet die automatische
+                        Bewertung. Dazu sucht das Skript in einer separaten vorangelegten Bewertungstabelle die passenden 
+                        Sternebewertungen zum entsprechenden Jahrgang, Geschlecht und natürlich der Station.
+                        Anschließend wird eine vorangelegte Urkunde mit Platzhaltern aus Google Docs kopiert und die Platzhalter 
+                        werden durch die entsprechenden Bewertungen, Werte, Namen usw. ausgetauscht. Die Urkunden werden alle in einem
+                        gemeinsamen Google Drive Ordner abgespeichert, sodass sie ausgedruckt werden können.<br><br>
+                        Dieses Jahr fand der Wettkampf erneut statt, wobei das automatisierte System zum Einsatz kam. 
+                        Für die Kinder ergab sich so nur noch eine Wartezeit von etwa
+                        5 min zwischen der Abgabe der Laufzettel und der "Siegerehrung" mit Ausgabe der Urkunde.
+                    </p>
+
+
+                    						
+
+                 </div> <!-- end entry-primary -->		  			   
+
+                  <div class="pagenav group">
+                      <div class="prev-nav">
+                          <!-- <a href="#" rel="prev">
+                              <span>Previous</span>
+                              Tips on Minimalist Design 
+                          </a> -->
+                      </div>				   
+                   </div>
+
+             </article>
+        
+
+         </div> <!-- end col-twelve -->
+    </div> <!-- end row -->
+
+    				
+
+
+
+          </div> <!-- end col-full -->
+      </div> <!-- end row comments -->
+     </div> <!-- end comments-wrap -->
+
+</section> <!-- end content -->
+
+   
+   <!-- footer
+   ================================================== -->
+   <footer>
+
+   	<div class="footer-main">
+
+   		<div class="row">  
+
+	      	<div class="col tab-full mob-full footer-info">            
+
+	            <h4>Information</h4>
+
+	               <p>
+		          	Diese Seite dient der (ordentlichen) Dokumentation meiner Projekte
+                </p>
+
+		      </div> <!-- end footer-info -->
+
+	      	<div class="col tab-1-3 mob-1-2 site-links">
+
+	      		<h4>Navigation</h4>
+
+	      		<ul>
+	      			<li><a href="#">Home</a></li>
+						 
+						<li><a href="#">Über mich</a></li>
+					</ul>
+
+	      	</div> <!-- end site-links -->  
+
+              <div id="go-top">
+                <a class="smoothscroll" title="Back to Top" href="#top"><i class="icon icon-arrow-up"></i></a>
+             </div>  
+
+	      </div> <!-- end row -->
+
+   	</div> <!-- end footer-main -->
+
+   </footer>  
+
+   <div id="preloader"> 
+    	<div id="loader"></div>
+   </div> 
+
+   <!-- Java Script
+   ================================================== --> 
+   <script src="js/jquery-2.1.3.min.js"></script>
+   <script src="js/plugins.js"></script>
+   <script src="js/jquery.appear.js"></script>
+   <script src="js/main.js"></script>
+
+</body>
+
+</html>
