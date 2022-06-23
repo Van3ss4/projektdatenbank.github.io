@@ -91,60 +91,111 @@
 
                 <div class="content-media">
                      <div class="post-thumb" style="text-align: center;">
-                         <img src="images/thumbs/workflowUrkunden.png" style="max-width: 60vh;">
+                         <img src="images/thumbs/foto_3d_scanner.jpg" style="max-width: 60vh; margin-bottom: 20px;">
                      </div>  
                  </div>
 
+
                  <div class="primary-content">
 
-                     <h1 class="page-title">Automatische Urkundengenerierung</h1>	
+                     <h1 class="page-title">3D-Laserscanner</h1>	
 
                      <ul class="entry-meta">
-                         <li class="date">April 2022</li>
+                         <li class="date">Mai 2022</li>
                     </ul>						
 
-                    <p class="lead">Problemstellung</p>
-                         
+                    <p class="lead">Ziel der Arbeit</p>
+                         Im Rahmen der Studienarbeiten im 5. und 6. Semester des Bachelorstudiums Mechatronik an der DHBW
+                         habe ich mit einem Kommilitonen einen lasergestützen 3D-Scanner von Grund auf neu entwickelt. 
+                         Ziel war die Entwicklung eines abgeschlossenen benutzerfreundlichen Systems, das mittels eines
+                         Linienlasers und einer Kamera die Kontur verschiedener Objekte erfasst.
+                        <br><br>
+                         Die Arbeit umfasst:
                     <p>
-                        Letztes Jahr habe ich bei einem Kinder-Leichtathletikwettkampf geholfen, bei dem die
-                        Kinder mehrere Stationen durchlaufen und Punkte sammeln. Jedes Kind hat 
-                        dabei einen Laufzettel, auf dem die Leistungen an den einzelnen Stationen 
-                        eingetragen werden. Am Ende wird dieser Zettel im Wettkampfbüro abgegeben, wo 
-                        freiwillige Helfer (unter anderem ich) diese Leistungen in eine Tabelle übertragen, 
-                        die Sternebewertung aus einer anderen Tabelle abhängig von Jahrgang und Geschlecht des 
-                        Kindes ablesen und anschließend mit diesen Werten eine Urkundenvorlage ausfüllen. Bei
-                        ein paar hundert teilnehmenden Kindern ist das eine ziemlich nervige Aufgabe, zumal 
-                        schnell Tipp- oder Übertragungsfehler entstehen. Die Kinder können über einen Zeitraum
-                        von sechs Stunden jederzeit mit der Absolvierung der Stationen beginnen/aufhören.
-                        Das heißt, es kommen kontinuierlich Laufzettel rein, die verarbeitet werden müssen.
-                        Im Wettkampfbüro haben sich allerdings mit der Zeit immer mehr Laufzettel angestaut, weil sie nicht schnell genug
-                        verarbeitet werden konnten. Gerade zum Ende des Events mussten die Kinder teilweise 45 Minuten auf ihren
-                        Urkunde warten. Deshalb habe ich mir überlegt, wie man das System verbessern kann.
-
+                    <ul>
+                        <li>Mechanische Konstruktion von Gehäuse und Antrieb</li>
+                        <li>Auswahl geeigneter elektronischer Komponenten</li>
+                        <li>Ansteuerung von Motor, Kamera und Display</li>
+                        <li>Entwicklung einer intuitiven Bedienoberfläche</li>
+                        <li>Gewährleistung der Bediensicherheit</li>
+                        <li>Berechnung der Raumkoordinaten einzelnder Punkte der Objektkontur anhand
+                            der aufgenommenen Kamerabilder </li>
+                        <li>Korrektur der perspektivischen Verzerrung</li>
+                        <li>Vernetzen der berechneten Punktwolke zu einer STL-Datei</li>
+                    </ul>
                     </p>
 
-                    <p class="lead">Lösung</p>
+                    <div class="row" style="margin-top: 50px; margin-bottom: 50px; text-align: center;"> 
+                        <img src="images/thumbs/single/scanna_offen.jpg" style="max-width: 80vh; margin-bottom: 50px;">
+                        <iframe width="426" height="240" src="https://youtu.be/embed/xen-s0eyVRo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+                        </iframe>
+                    </div>
+
+                    <p class="lead">Ergebnis</p>
                          
                     <p>
-                        Google bietet die Möglichkeit mit "Google Apps Scrip" Google Tabelle, Dokumente, Formulare usw. 
-                        zu verwalten. Die Sprache basiert auf JavaScript und hat Funktionen, mit denen man auf die
-                        verschiedenen Dokumente zugreifen kann. Diese Funktionen hat auch Microsoft Office, allerdings
-                        war es wichtig, dass mehrere Personen gleichzeitig von verschiedenen Rechnern auf die 
-                        Dokuente zugreifen können. Deshalb wurden die Google Apps bevorzugt<br><br>
-                        Da das Konzept mit den Laufzetteln erhalten bleiben sollte, um den Kindern ihren Fortschritt
-                        beim Absolvieren der Stationen zu visualisieren, werden die Ergebnisse nach wie vor im Wettkampfbüro
-                        einmalig in eine Google-Tabelle abgetippt. In dieser Tabelle sind die Spalten mit den Namen duch die Online-Anmeldung 
-                        schon vorangelegt, um Tippfehler bei den Namen zu vermeiden. <br>
-                        Sobald eine Zeile vollständig mit allen Werten ausgefüllt wurde, startet die automatische
-                        Bewertung. Dazu sucht das Skript in einer separaten vorangelegten Bewertungstabelle die passenden 
-                        Sternebewertungen zum entsprechenden Jahrgang, Geschlecht und natürlich der Station.
-                        Anschließend wird eine vorangelegte Urkunde mit Platzhaltern aus Google Docs kopiert und die Platzhalter 
-                        werden durch die entsprechenden Bewertungen, Werte, Namen usw. ausgetauscht. Die Urkunden werden alle in einem
-                        gemeinsamen Google Drive Ordner abgespeichert, sodass sie ausgedruckt werden können.<br><br>
-                        Dieses Jahr fand der Wettkampf erneut statt, wobei das automatisierte System zum Einsatz kam. 
-                        Für die Kinder ergab sich so nur noch eine Wartezeit von etwa
-                        5 min zwischen der Abgabe der Laufzettel und der "Siegerehrung" mit Ausgabe der Urkunde.
+                        Das Gehäuse besteht aus 3d-gedruckten Elementen und Holz, das mithilfe eines Lasercutters
+                        zugeschnitten wurde. Es wurde eine sechseckige Grundfläche gewählt, um trotz des begrenzten
+                        Arbeitsbereichs des verfügbaren Lasercutters eine möglichst große Grundfläche ohne Verkleben
+                        der Holzelemente zu erreichen.<br>
+                        Es wurde für die Ästhetik ein innenliegendes Türgelenk entwickelt, das außerdem einen 
+                        Kontaktschalter zur Aktivierung/Deaktivierung des Lasers bedient. <br>
+                        Ein Raspberry Pi 3B+ steuert den Schrittmotor(-Treiber), die Kamera und den Laser an. Es 
+                        wurde ein Shield für den Raspi entwickelt, um alle diese Komponenten darauf anschließen zu können.
+                        Auf dem Raspi läuft außerdem die gesamte Datenerfassung und -verarbeitung. <br><br>
+                        
+                        Der Scanprozess läuft folgendermaßen ab:<br>
+                        Der User stellt das zu scannende Objekt auf den Drehteller. Zur Verifizierung des sicheren Stands
+                        kann eine Testfahrt durchgeführt werden. In den Scanvoreinstellungen wird das Objekt in die Kategorien
+                        "kantig" oder "eckig" eingeteilt. Die Wahl beeinflusst dann den Grad des Polynoms, an das bei der
+                        Datenglättung angenähert wird. Mit der Auflösung wird die Drehgeschwindigkeit reguliert. Bei langsamerer
+                        Drehung werden bei gleicher Framerate mehr Punkte aufgenommen. Nachdem die Tür geschlossen wurde,
+                        beginnt der Scanprozess: Der Drehteller rotiert und die Kamera nimmt Bilder auf. In jeder Zeile 
+                        des zweidimensionalen Pixel-Arrays wird jeweils der hellste rote Punkt gesucht. Mit dem Zeilen- und Spaltenindex
+                        kann durch Triangulation dem Punkt ein Abstand zum Drehzentrum und eine Höhe zugeordnet werden. Mit dem
+                        Winkel des Drehtellers können so die kartesischen Koordinaten berechnet werden. Diese werden
+                        in einer Punktwoke abgespeichert, und auf dem Display angezeigt.
                     </p>
+
+                    
+                    <div class="row" style="margin-top: 50px; margin-bottom: 50px; text-align: center;"> 
+                        <img src="images/thumbs/ergebnis.png" style="max-width: 40%; margin: auto; max-height: 50vh; aspect-ratio: auto;" alt="">
+                    </div>
+
+                    <p class="lead">Vernetzung der Punktwolke</p>
+                    <p>
+                        Eine STL-Datei ist prinzipiell ein Dreiecksflächenkörper, d.h. es sind immer drei nebeneinander
+                        liegende Punkte zu einer Fläche verbunden und nach einer bestimmten Konvention mit dem Normalenvektor zu 
+                        dieser Ebene in der Datei abgespeichert.<br>
+                        Die Vernetzung der Punktwolke hat sich allerdings als ein nicht triviales Problem herausgestellt.
+                        Zu Beginn sind wir davon ausgegangen, dass wir einfach einen fertigen Algorithmus herunterladen und 
+                        in unser Programm einbinden können. Allerdings ergab sich dabei immer das Problem, dass die Algorithmen
+                        keine geschlossenen Körper erstellen konnten. Die gescannten Punkte liegen prozessbedingt und geometriebedingt nicht alle in 
+                        gleichmäßigen Abständen nebeneinander. An der Auflagefläche und an Stellen, wo die Laserlinien bspw. durch
+                        eine Kante im Bild der Kamera verdekct ist, ergeben sich Lücken. <br><br>
+                        Deshalb haben wir einen eigenen Algorithmus für die Vernetzung entwickelt. Er verbindet die Punkte
+                        auf Basis der Aufnahmereihenfolge und schließt die Grund- und Deckfläche automatisch. Damit spart man sich 
+                        das wiederholte Durchsuchen der Punktwolke, was den Prozess sehr effizient macht und erheblich an Rechenleistung spart.
+                    </p>
+
+                    <div class="row" style="margin-top: 50px; margin-bottom: 50px; text-align: center;"> 
+                        <img src="images/thumbs/Vergleich_Algorithmen_meshen.png" style="width: 50%; margin: auto;" alt="">
+                    </div>
+
+                    <p class="lead">Software-Architektur</p>
+                    <p>
+                        Die Software besteht aus einem Frontend in HTML, CSS und Javascript sowie einem Python-Backend. 
+                        Über eine Websocket-Verbindung stehen die beiden unanhängig voneinander ausgeführten Programmteile in einem 
+                        bidirektionalen Datenaustausch.
+                        Der Raspi startet einen lokalen Server, mit dem das Frontend gehostet wird. Das Backend verbindet sich damit 
+                        automatisch.
+                    </p>
+
+                    <div class="row" style="margin-top: 50px; margin-bottom: 50px; text-align: center;"> 
+                        <img src="images/thumbs/single/scanna_innen.jpg" style="width: 80%; margin: auto;" alt="">
+                        <img src="images/thumbs/single/scanna_gelenk.jpg" style="width: 80%; margin: auto;" alt="">
+                        <img src="images/thumbs/single/scanna_display.jpg" style="width: 80%; margin: auto;" alt="">
+                    </div>
 
 
                     						
