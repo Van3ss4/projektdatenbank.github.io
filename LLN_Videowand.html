@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+   <!--- basic page needs
+   ================================================== -->
+   <meta charset="utf-8">
+	<title>Projektdatenbank</title>
+	<meta name="description" content="">  
+	<meta name="author" content="">
+
+   <!-- mobile specific metas
+   ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+ 	<!-- CSS
+   ================================================== -->
+   <link rel="stylesheet" href="css/base.css">
+   <link rel="stylesheet" href="css/vendor.css">  
+   <link rel="stylesheet" href="css/main.css">
+        
+
+   <!-- script
+   ================================================== -->
+	<script src="js/modernizr.js"></script>
+	<script src="js/pace.min.js"></script>
+
+   <!-- favicons
+	================================================== -->
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+
+</head>
+
+<body id="top">
+
+	<!-- header 
+   ================================================== -->
+   <header class="short-header">   
+
+   	<div class="gradient-block"></div>	
+
+   	<div class="row header-content">
+
+   		<div class="logo">
+	         <a href="index.html">Author</a>
+	      </div>
+
+	   	<nav id="main-nav-wrap">
+				<ul class="main-navigation sf-menu">
+					<li><a href="index.html" title="">Home</a></li>									
+					<li><a href="ueberMich.html" title="">Über mich</a></li>										
+				</ul>
+			</nav> <!-- end main-nav-wrap -->
+
+			<!--div class="search-wrap">
+				
+				<form role="search" method="get" class="search-form" action="#">
+					<label>
+						<span class="hide-content">Search for:</span>
+						<input type="search" class="search-field" placeholder="Type Your Keywords" value="" name="s" title="Search for:" autocomplete="off">
+					</label>
+					<input type="submit" class="search-submit" value="Search">
+				</form>
+
+				<a href="#" id="close-search" class="close-btn">Close</a>
+
+			</div> <!-- end search wrap -->	
+
+			<div class="triggers">
+				<!--a class="search-trigger" href="#"><i class="fa fa-search"></i></a-->
+				<a class="menu-toggle" href="#"><span>Menu</span></a>
+			</div> <!-- end triggers -->	
+   		
+   	</div>     		
+   	
+   </header> <!-- end header -->
+
+
+   <!-- masonry
+   ================================================== -->
+<!-- content
+   ================================================== -->
+   <section id="content-wrap" class="blog-single">
+    <div class="row">
+        <div class="col-twelve">
+
+            <article class="format-standard">  
+
+                <div class="content-media">
+                     <div class="post-thumb" style="text-align: center;">
+                         <img src="images/thumbs/single/LLN_videowand2.webp" style="max-width: 60vh;">
+                         <img src="images/thumbs/single/LLN_Videowand3.webp" style="max-width: 60vh;">
+                     </div>  
+                 </div>
+
+                 <div class="primary-content">
+
+                     <h1 class="page-title">Videowand-Anzeige für die Lange Laufnacht</h1>	
+
+                     <ul class="entry-meta">
+                         <li class="date">Mai 2024</li>
+                    </ul>						
+
+                    <p class="lead">Problemstellung</p>
+                         
+                    <p>
+                        Die Lange Laufnacht ist ein internationaler Nominierungswettkampf und wird von der
+                        LG Region Karlsruhe veranstaltet. Da ich dort Mitglied bin, bin ich auch jedes Jahr
+                        als Helferin dabei.<br><br>
+                        Den ganzen Abend über werden Rennen über verschiedene Distanzen, für Männer und Frauen, 
+                        sowie für verschiedene Leistungsnieveaus ausgetragen. Jeder der Läufe wird durch 
+                        Tempomacher gepaced auf eine bestimmte Zielzeit, damit die Athleten dort Normen für 
+                        Deutsche Meisterschaften, oder auch EM, WM, Olympia laufen können.
+                        <br><br> 
+                        Damit alle den Überblick behalten, steht im Infield eine LED Anzeige, auf der der Zeitplan
+                        mit den wichtigsten Informationen zu jedem Event dargestellt ist. Jeder Lauf wird 
+                        zudem von einem Unternehmen gesponsert, dessen Logo dann während des Laufs präsentiert wird.
+                        <br><br>
+                        Die letzten Jahre wurde die Anzeige mithilfe einer PowerPoint Präsentation erstellt.
+                        Es gab dann verschiedene Folien mit dem Zeitplan, die über Hyperlinks zu den entsprechenden
+                        Seiten mit den Sponsorenlogos geführt haben.
+                        Die Präsentation zu erstellen war denkbar viel Arbeit und wie bei allen Events dieser Art, kommt
+                        es leider auch hier noch kurz vor dem Event immer wieder zu leichten Zeitplanänderungen, die
+                        dann auf allen betroffenen Folien angepasst werden müssen. Dadurch kam es immer wieder zu
+                        Fehlern und es bedeutete für alle Beteiligten Stress und Arbeit.
+                    </p>
+
+                    <p class="lead">Lösung</p>
+                    <p>
+                        Dieses Jahr kam ich nun auf die Idee, das Ganze irgendwe programmatisch zu lösen. Die Anforderungen
+                        waren:
+                    </p>
+                    <p>
+                        <ul>
+                            <li>Cross-Platform fähig: Muss auf Windows (im Zweifel Windows XP, die Rechner sind teilweise...alt), Mac OS, Linux, evtl. Tablet funktionieren</li>
+                            <li>Muss sich automatisch an verschiedene Bildschirmgrößen anpassen</li>
+                            <li>Muss über einen USB Stick laufen, ohne dass man etwas downloaden muss</li>
+                            <li>Darf keine Internetverbindung erfordern</li>
+                        </ul>
+                        </p>
+                    <p>
+                        Damit fielen leider die "schönen" Lösungen wie eine single-page React App weg, da man dafür ein paar 
+                        Sachen installieren musste (zumindest habe ich es nicht geschafft, das alleine über einen USB-Stick zu übertragen)
+                        <br><br>
+                        In Anbetracht der knappen Zeit habe ich mich schlussendlich für eine "unschöne", aber effiziente Lösung
+                        entschieden: <br>
+                        Ein Python Skript bekommt die Excel-Tabelle (in der der Zeitplan sowieso geplant wird) und 
+                        einen Ordner mit den zugehörigen Sponsorenlogos.
+                        Dann generiert es eine HTML-Datei mit einem auffaltbaren Akkordion als Zeitplan. Die einzelnen Events
+                        sind jeweils ein Akkordion Element. Das Skript setzt die HTML Datei aus Code Snippets zusammen und setzt die
+                        entsprechenden Werte aus der Tabelle ein. <br>
+                        Je nach Sponsor sucht es sich dann noch das passende Logo heraus und 
+                        zeigt es in den Accordion-Details an, wenn man es aufklappt.
+                    </p>
+
+                    <div class="row" style="margin-top: 50px; text-align: center;"> 
+                        <img src="images/thumbs/single/LLN_Screenshots/lln_screenshot_zeitplan.png" style="width: 70%; margin: auto;" alt="">
+                    </div>
+                    <div class="row" style="margin-top: 50px; margin-bottom: 50px; text-align: center;"> 
+                        <img src="images/thumbs/single/LLN_Screenshots/lln_screenshot_zeitplan_geoeffnet.png" style="width: 70%; margin: auto;" alt="">
+                    </div>
+
+                    <p>
+                        Bei einer Zeitplanänderung wird die neue Tabelle einfach in das Skript geladen und die HTML-Datei wird neu generiert.
+                        <br><br>
+                        So hat man am Ende eine einzige HTML Datei (mit CSS und JS inbegriffen), die vom USB-Stick aus in 
+                        jedem Browser geöffnet werden kann. Bei den Bildern muss noch darauf geachtet werden, dass sie nicht zu groß sind,
+                        da sich die Seite nicht nach dem Öffnen und Schließen von ein paar Accordion-Items nicht aufhängt.
+                        <br><br>
+                        Zusätzlich können durch die Betätigung von ein paar Hotkeys Animationen aufgerufen werden. Wenn beispielsweise
+                        ein Meetingrekord, WM- oder Olympianorm gelaufen werden, erscheint eine entsprechende Anzeige mit einer Konfetti-Animation.
+                        Das hat den Athleten sehr gut gefallen!
+                    </p>
+
+                    <div class="row" style="margin-top: 50px; margin-bottom: 50px;">
+                        <div class="col-six tab-full" style="text-align: center;">
+                            <video muted controls style="width: 90%;" >
+                                <source src="media/LLN_meeting_record_animation.mp4" type="video/mp4"/>
+                            </video>
+                            
+                        </div>
+                        <div class="col-six tab-full" style="text-align: center;">
+                            <video muted controls style="width: 90%;" >
+                                <source src="media/lln_olympic_standard_animation.mp4" type="video/mp4"/>
+                            </video>
+                        </div>
+                    </div>
+
+                    <p>
+                        Insgesamt war das in der Form sicherlich keine schöne Lösung, allerdings hat sie die Anforderungen alle erfüllt, war
+                        innerhalb eines Nachmittags erstellt und am Wettkampftag funktionsfähig. <br> "If it looks stupid but works, it ain't stupid" sagt man da wohl...<br>
+                        Ich habe noch einige Ideen, wie man das ganze etwas anwenderfreundlicher gestalten kann. 
+                        Wenn nächstes Jahr genug Zeit ist, gibt es dann vielleicht wieder ein neues Projekt :)
+                    </p>
+
+    
+                    <div class="col-six tab-full" style="text-align: center; vertical-align: center;">
+                        <img src="images/thumbs/single/LLN_videowand4.png" style="width: 100%; max-width: 350px ;margin: auto;" alt="">
+                    </div>
+
+
+
+                    						
+
+                 </div> <!-- end entry-primary -->		  			   
+
+                  <div class="pagenav group">
+                      <div class="prev-nav">
+                          <!-- <a href="#" rel="prev">
+                              <span>Previous</span>
+                              Tips on Minimalist Design 
+                          </a> -->
+                      </div>				   
+                   </div>
+
+             </article>
+        
+
+         </div> <!-- end col-twelve -->
+    </div> <!-- end row -->
+
+    				
+
+
+
+          </div> <!-- end col-full -->
+      </div> <!-- end row comments -->
+     </div> <!-- end comments-wrap -->
+
+</section> <!-- end content -->
+
+   
+   <!-- footer
+   ================================================== -->
+   <footer>
+
+   	<div class="footer-main">
+
+   		<div class="row">  
+
+	      	<div class="col tab-full mob-full footer-info">            
+
+	            <h4>Information</h4>
+
+	               <p>
+		          	Diese Seite dient der (ordentlichen) Dokumentation meiner Projekte
+                </p>
+
+		      </div> <!-- end footer-info -->
+
+	      	<div class="col tab-1-3 mob-1-2 site-links">
+
+	      		<h4>Navigation</h4>
+
+	      		<ul>
+	      			 <li><a href="index.html">Home</a></li>
+						 
+						<li><a href="ueberMich.html" title="">Über mich</a></li>
+					</ul>
+
+	      	</div> <!-- end site-links -->  
+
+              <div id="go-top">
+                <a class="smoothscroll" title="Back to Top" href="#top"><i class="icon icon-arrow-up"></i></a>
+             </div>  
+
+	      </div> <!-- end row -->
+
+   	</div> <!-- end footer-main -->
+
+   </footer>  
+
+   <div id="preloader"> 
+    	<div id="loader"></div>
+   </div> 
+
+   <!-- Java Script
+   ================================================== --> 
+   <script src="js/jquery-2.1.3.min.js"></script>
+   <script src="js/plugins.js"></script>
+   <script src="js/jquery.appear.js"></script>
+   <script src="js/main.js"></script>
+
+</body>
+
+</html>
